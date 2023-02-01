@@ -44,7 +44,7 @@ public class Book {
 	public Book(String bookID, String title, String author, String category, float price) {
 		super();
 		// book has start with 'B' and length is 4
-		if(bookID.charAt(0) != 'B' && bookID.length() != 4) {
+		if(bookID.charAt(0) != 'B' || bookID.length() != 4) {
 			throw new InvalidBookException("bookId invalid");
 		}else {
 			this.bookID = bookID;

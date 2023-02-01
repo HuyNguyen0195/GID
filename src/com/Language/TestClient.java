@@ -24,6 +24,7 @@ public class TestClient {
 				java.showMessage();
 			}
 		});
+		
 		System.out.println("which one you want run first");
 		System.out.println("1-C Program");
 		System.out.println("2-Java Program");
