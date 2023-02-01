@@ -6,6 +6,7 @@ public class TestClient {
 	public static void main(String[] args) {
 		Clang c=new Clang();
 		JavaLang java=new JavaLang();
+		// create thread for C
 		Thread tC=new Thread(new Runnable() {
 			
 			@Override
@@ -14,6 +15,7 @@ public class TestClient {
 				c.showMessage();
 			}
 		});
+		//create thread for Java
 		Thread tJava=new Thread(new Runnable() {
 			
 			@Override
@@ -28,6 +30,7 @@ public class TestClient {
 		Scanner sc=new Scanner(System.in);
 		String choice=sc.next();
 		sc.close();
+		
 		switch (choice) {
 		case "C":
 			tC.setPriority(10);
@@ -43,11 +46,7 @@ public class TestClient {
 		default:
 			break;
 		}
-		/*
-		 * if(choice.equals("Java")) { tC.setPriority(10); tJava.setPriority(1);
-		 * tC.start(); tJava.start(); }else if(choice.equals("C")) { tC.setPriority(1);
-		 * tJava.setPriority(10); tJava.start(); tC.start(); }
-		 */
+		
 		
 	}
 	
